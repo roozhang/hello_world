@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+#include <cctype>//要用到cctype header
+using namespace std;
+
+int main()
+{
+    string str;
+    cin>>str;
+    for(char a:str)
+    {
+        if(!ispunct(a))
+        cout<<a;
+    }
+    return 0;
+}
