@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string str;
+    cin>>str;
+    for(char &a:str)
+    {
+        a='X';
+    }
+    cout<<str;
+    return 0;
+}
+结果是一样的呀。
