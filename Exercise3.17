@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <cctype>
+using namespace std;
+
+int main()
+{
+    vector<string> vec;
+    string str;
+    while (cin>>str)
+        vec.push_back(str);
+    for(string &a:vec)
+    {
+        for(char &b:str)
+            toupper(b);
+    }
+    for (string a:vec)
+        cout<<a<<endl;
+    return 0;
+}
+//怎么终止输入呢？？？
