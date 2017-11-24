@@ -37,3 +37,76 @@ int main(){
     cout<<ans[ans.size()-1];
     return 0;
 }
+
+*****************************
+#include<iostream>
+#include<vector>
+using namespace std;
+
+bool leftbig(int y,int b, int m){
+int _2lnum = ((b-y)*m+1)*(2*y+(b-y)*m);
+int _2rnum = m*y*(2*m*(b-y)+m+y);
+int a=_2lnum-_2rnum;
+if(a>0){
+    return true;}
+else{
+    return false;}
+}
+int main(){
+
+    vector<int> vec,ans;
+    for(int i ;cin>>i;vec.push_back(i)){
+
+    }
+    auto len = vec.size();
+    int m,b;
+    for(unsigned i = 0;i<len;i=i+2){
+        m=vec[i];
+        b=vec[i+1];
+        int mid=b;
+        /*for(;leftbig(mid,b,m);){
+            mid++;
+        }*/
+        for(;!leftbig(mid,b,m);){
+            mid--;
+        }   //mid时，一定向右移，leftbig一定为false
+        int s=((m*b-m*mid+1)*(mid*mid+mid)+(mid+1)*((m*b-m*mid)*(m*b-m*mid+1)))/2;
+        ans.push_back(s);
+    }
+    for(unsigned i = 0;i<ans.size()-1;i++)
+        {cout<<ans[i]<<endl;}
+    cout<<ans[ans.size()-1];
+    return 0;
+}
+*********************************
+#include<iostream>
+using namespace std;
+
+bool leftbig(int y,int b, int m){
+int _2lnum = ((b-y)*m+1)*(2*y+(b-y)*m);
+int _2rnum = m*y*(2*m*(b-y)+m+y);
+int a=_2lnum-_2rnum;
+if(a>0){
+    return true;}
+else{
+    return false;}
+}
+int main(){
+
+
+    int m,b;
+    while(cin>>m>>b){
+        int mid=b;
+
+        for(;!leftbig(mid,b,m);){
+            mid--;
+        }
+        int s=((m*b-m*mid+1)*(mid*mid+mid)+(mid+1)*((m*b-m*mid)*(m*b-m*mid+1)))/2;
+        cout<<s<<endl;
+    }
+
+
+
+    return 0;
+}
+
