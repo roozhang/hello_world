@@ -1,0 +1,17 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+    vector<long long> vec;
+    for(int i = 0;i<700;i++){
+        long long a;
+        cin>>a;
+        vec.push_back(a);
+    }
+    for(int i = 0;i<701;i++){
+        cout<<vec[i]<<",";
+    }
+    int b;
+    cin>>b;
+    return 0;
+}
