@@ -1,0 +1,24 @@
+ oooooo                       o o     o        o
+ o    o      ooooo       o  o o o     o       o o
+ oooooo     o  o  o      o  o       ooooooo   o o
+  o o      o   o   o     o   o        o   o   o o
+  o o      o   o   o    o     o       o   o    o
+ o  o  o    ooo   o    o       o     o    o
+o   oooo                           o    oo     o
+#include<iostream>
+#include<string>
+using namespace std;
+
+
+int main(){
+    string a1,a2,a3,a4,a5,a6,a7;
+    a1=" oooooo                       o o     o        o";
+    a2=" o    o      ooooo       o  o o o     o       o o";
+    a3=" oooooo     o  o  o      o  o       ooooooo   o o";
+    a4="  o o      o   o   o     o   o        o   o   o o";
+    a5="  o o      o   o   o    o     o       o   o    o";
+    a6=" o  o  o    ooo   o    o       o     o    o";
+    a7="o   oooo                           o    oo     o";
+    cout<<a1<<endl<<a2<<endl<<a3<<endl<<a4<<endl<<a5<<endl<<a6<<endl<<a7;
+    return 0;
+}
