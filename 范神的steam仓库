@@ -1,0 +1,31 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+long long  ncifang(int a)
+{
+    if(a==1){
+        return 2;
+    }
+    else{
+        if(a%2==1){
+            return 2*2*ncifang(a/2);
+        }
+        else{
+            return 2*ncifang(a/2);
+        }
+    }
+}
+int main(){
+    int a,b;
+    vector<int> vec;
+    while(cin>>a>>b){
+        long long  s = ncifang(a)-2;
+        s%=b;
+        vec.push_back(s);
+    }
+    for(auto i=vec.begin();i!=vec.end();i++){
+        cout<<*i<<endl;
+    }
+    return 0;
+}
