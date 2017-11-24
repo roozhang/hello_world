@@ -1,0 +1,45 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+bool isprime(int a){
+    if(a<=1){
+        return false;
+    }
+    else if(a==2||a==3){
+        return true;
+    }
+    else{
+        for(int i = 2;i*i<=a;i++){
+            if(a%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+int main(){
+    vector<long long> x000;
+
+    for(int i = 0;i<=700;i++){
+        x000.push_back(i*1000);
+    }
+    int k = 1;
+    int n = 0;
+    long long s = 0;
+    for(int i = 2;k<=700;i++){
+        if(isprime(i)){
+            n++;
+            s+=i;
+            if(n==x000[k]){
+                cout<<s<<endl;
+                k++;
+            }
+        }
+        else{
+
+        }
+
+    }
+    return 0;
+}
