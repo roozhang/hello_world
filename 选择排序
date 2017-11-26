@@ -1,0 +1,37 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    vector<int> vec;
+    int a;
+    int i = 0;
+    while(cin>>a){
+        vec.push_back(a);
+        i=i+1;
+    }
+    int len = vec.size();
+    for(int i = 0;i<len;i++){
+        for(int k = i+1;k<len;k++){
+            if(vec[i]>vec[k]){
+                int b = vec[i];
+                vec[i]=vec[k];
+                vec[k]=b;
+            }
+            else{
+
+            }
+        }
+    }
+    for(int i = 0;i<len;i++){
+        cout<<vec[i];
+        if(i!=len-1){
+            cout<<" ";
+        }
+        else{
+
+        }
+    }
+    return 0;
+}
