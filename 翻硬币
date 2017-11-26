@@ -1,0 +1,64 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+/*
+        将两个序列（a，b）转化问题简化为一个序列（c）翻到全部为*******的序列的问题。
+    a序列与b序列的同一个位置如果状态相同，c序列的这个位置就不用翻，记入值*；
+    反之记入o。
+        从最简单的情况，只有两枚硬币需要翻开始（需要翻的一个币数量必然是偶数，（不考虑零？））。
+    需要的步数就是两位置位置之差。而四枚就是1和2步数之差加上3和4步数之差，and so on……
+*/
+int main()
+{
+    int n,coins;
+    cin>>n;
+    for(int i = 0;i<n;i++){
+        string str1,str2;
+        cin>>str1>>str2;
+        coins=str1.size();
+        vector<int> str(coins);
+        for(int j = 0;j<coins;j++){
+            if(str1[j]!=str2[j]){
+                str[j]=1;
+            }
+            else{
+                str[j]=0;
+            }
+        }
+        vector<int> vec(coins);
+        int k = 0;
+        for(int l = 0;l<coins;l++){
+            if(str[l]==1){
+                vec[k]=l;
+                k++;
+            }
+            else{
+
+            }
+        }
+        if(k==0){
+            cout<<"0"<<endl;
+        }
+        else{
+            int m = 0;
+            int lpoint=vec[m];
+            int rpoint=vec[m+1];
+            int sum = 0;
+            for(;m<k;m+=2){
+                if(rpoint-lpoint<0){
+                    cout<<"impossible!";
+                }
+                else{
+                    sum+=(rpoint-lpoint);
+                }
+            }
+            cout<<sum<<endl;
+        }
+
+    }
+
+
+    return 0;
+}
