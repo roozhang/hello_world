@@ -1,0 +1,23 @@
+#include <iostream>
+#include<list>
+#include<vector>
+
+using namespace std;
+
+int main(){
+    list<int> ilist = {1,2,3,4,5};
+    vector<int> ivec = {6,7,8,9,10};
+    vector<double> dvec1(ilist.cbegin(),ilist.cend());
+    vector<double> dvec2(ivec.cbegin(),ivec.cend());
+    cout<<"dvec1: ";
+    for(auto a : dvec1){
+        cout<<a<<" ";
+    }
+    cout<<"\n";
+    cout<<"dvec2: ";
+    for(auto a : dvec2){
+        cout<<a<<" ";
+    }
+    cout<<"\n";
+    return 0;
+}
